@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HTML Image</title>
+    <link rel="stylesheet" href="styles.css" />
+		<link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+  </head>
+  <body>
+    <header>
+      <div class="navigator">
+        <figure class="logoContainer">
+          <img src="images/logo.jpg" alt="Logo" width="500" height="500" />
+          <figcaption class="caption">SSE Logo</figcaption>
+        </figure>
+        <h1>SSE IT and Business Solutions</h1>
+				<nav id="navMenu">
+					<span class="material-icons" onclick="hideMenu()">
+						close
+						</span>
+					<ul>
+						<li><a href="#">Home</a></li>
+						<li><a href="#">About Us</a></li>
+						<li><a href="#">Clients</a></li>
+						<li><a href="#">Registration</a></li>
+						<li><a href="#">Contact Us</a></li>
+						<li><a href="#">Social Medias</a></li>
+					</ul>
+				</nav>
+				<span class="material-icons" onclick="showMenu()">
+					menu
+					</span>					
+      </div>
+			<div class="mainContainer">
+				<h2><span><a href="#">Our Portifolio</a></span></h2>
+				<div class="InnerContainer">
+					<div class="box">
+						<h3>Website Development</h3>
+						<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Magni harum veniam inventore vel aliquid praesentium ea, animi natus excepturi nostrum.</p>
+					</div>
+					<div class="box">
+						<h3>Mobile App Development</h3>
+						<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Magni harum veniam inventore vel aliquid praesentium ea, animi natus excepturi nostrum.</p>
+					</div>
+					<div class="box">
+						<h3>WAN and LAN</h3>
+						<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Magni harum veniam inventore vel aliquid praesentium ea, animi natus excepturi nostrum.</p>
+					</div>
+				</div>
+			</div>
+    </header>
+
+
+		<!-----------------------------------------Script--------------------------------------------------->
+
+		<script>
+			var navMenu = document.getElementById("navMenu");
+			function hideMenu(){
+				navMenu.style.right = "-200px"
+			}
+			function showMenu(){
+				navMenu.style.right = "0"
+			}
+		</script>
+
+  </body>
+</html>

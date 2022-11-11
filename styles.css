@@ -1,0 +1,200 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
+*{
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+img{
+	display: block;
+}
+.caption{
+	position: absolute;
+	left: -10000px;
+}
+
+body{
+	background-color: aliceblue;
+	font-family: 'Ubuntu', sans-serif;
+	color: aliceblue;
+}
+
+header{
+	width: 100%;
+	min-height: 100vh;
+	background-color: aliceblue;
+	background-image: linear-gradient(hsla(207, 44%, 49%, 0.493),hsla(0, 0%, 100%, 0.493)),url(images/computer.jpg);
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	padding: 20px;
+}
+
+.navigator{
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: 30px;
+}
+
+nav{
+	flex: 1;
+	text-align: right;
+	align-self: center;
+}
+
+nav ul{
+	list-style: none;
+}
+
+nav ul li {
+	display: inline-block;
+	padding: 10px;
+	position: relative;
+}
+
+nav ul li a, nav ul li a:visited{
+	text-decoration: none;
+	text-transform: uppercase;
+	color: aliceblue;
+	font-size: 0.8rem;
+	text-shadow: 2px 2px 5px #000;	
+}
+
+nav ul li::after{
+	content: '';
+	display: block;
+	width: 0;
+	height: 2px;
+	background: goldenrod;
+	margin: auto;
+}
+
+nav ul li:hover::after{
+	width: 100%;
+	transition: 0.5s;
+}
+
+.logoContainer{
+	width: 8%;
+}
+
+.logoContainer img{
+	width: 100%;
+	height: auto;
+	min-width: 50px;
+	border-radius: 50%;
+	border: 2px solid goldenrod;
+	opacity: 50%;
+}
+
+header h1{
+	text-transform: uppercase;
+	font-size: 1rem;
+	text-shadow: 2px 2px 5px #000;
+	letter-spacing: 0.2rem;
+	opacity: 90%;
+}
+.mainContainer{
+	position: absolute;
+	top: 30%;
+	text-align: center;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+.mainContainer span{
+	display: inline-block;
+	padding: 10px 30px;
+	border: 1px white solid;
+	border-radius: 10px;
+}
+
+.mainContainer h2 a, .mainContainer h2 a:visited{
+	text-decoration: none;
+	color: aliceblue;
+}
+
+.mainContainer span:hover{
+	border: 1px goldenrod solid;
+	background-color: goldenrod;
+	transition: 1s;
+}
+
+.InnerContainer{
+	padding: 50px;
+	margin-top: 40px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	gap: 50px;
+}
+
+.InnerContainer .box{
+	padding: 30px;
+	border-radius: 10px;
+	background-color: #243A73;
+	text-align: justify;
+	opacity: 90%;
+}
+
+.InnerContainer .box h3{
+	text-align: center;
+	margin-bottom: 20px;
+	color: aliceblue;
+}
+
+.InnerContainer .box p{
+	font-size: 0.8rem;
+	opacity: 60%;
+}
+
+.navigator .material-icons{
+	display: none;
+}
+
+@media(max-width:700px){
+	.mainContainer{
+		flex-direction: column;
+	}
+
+	.InnerContainer{
+		flex-direction: column;
+	}
+
+	nav ul li{
+		display: block;
+	}
+
+	nav{
+		position: absolute;
+		top: 0;
+		right: -200px;
+		width: 200px;
+		height: 100vh;
+		background-color: #243A73;
+		z-index: 1;
+		text-align: left;
+	}
+
+	.navigator .material-icons{
+		display: block;
+		margin:10px;
+		font-size: 2rem;
+		font-weight: 800;
+	}
+
+	nav ul{
+		padding: 10px 30px;
+	}
+
+	nav ul li::after{
+		display: none;
+	}
+
+	nav ul li a:hover, nav ul li a:focus{
+		color: orangered;
+	}
+
+}
